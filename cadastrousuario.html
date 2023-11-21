@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro Usuário</title>
+<!-- Inclua a biblioteca Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+ 
+<body>
+
+    <div class="cabecalho">
+        <br>
+    <div class="container text-center mt-3">
+        <img src="https://vestibular.fiap.com.br/fiap/net/MatriculaVestibular/Content/images/fiap.png" width="180" height="50" alt="">
+    </div>
+     
+    <div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+    <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="cadastroproduto.html">Cadastro produto</a>
+    </div>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    </div>
+ 
+    <!-- Cabeçalho -->
+
+    <br>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Cadastrar</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="/cadastrousuario" method="post">
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha:</label>
+                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                            </div>
+                            <button type="submit" class="btn btn-dark">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>    
+
+<br>
+<br>
+<footer class="bg-black text-center text-white">
+
+        <div class="container p-4 pb-0">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+      <br>
+
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.315);">
+            <a class="text-white" href="https://mdbootstrap.com/">R. Japão, 90 - Itaim Bibi, São Paulo - SP, 04530-070</a>
+        </div>
+</footer>
+
+  <style>
+
+.row{
+        margin-left: 90px;
+    }
+
+    .custom-carousel{
+        width: 100%;
+    }
+
+    .custom-carousel img{
+        max-height: 520px;
+    }
+
+    .cabecalho{
+        background-color: #000000;
+    }
+
+    .nav-item{
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    .img2 {
+        margin-right: 70px;
+        margin-left: 90px;
+    flex: 1;
+    padding: 20px;
+    }
+
+    .texto{
+        margin-left: 70px;
+    }
+
+    .titulo{
+        display: flex;
+        align-items: center;
+    }
+    .bg-black {
+        background-color: #000000;
+        color: #FFFFFF; 
+    }
+    .fa-facebook{
+        background-color: #345c94; 
+    }
+
+    .fa-twitter{
+    background-color: #44acec;
+    }
+    .fa-instagram{
+        background-color: #ca3d82;
+    }
+
+    .social-icons i {
+        font-size: 30px; 
+        border-radius: 50%; 
+        padding: 10px; 
+        color: white; 
+        margin: 5px;
+    }
+
+    .nav-item{
+        margin-right: 20px;
+    }
+    .img2 {
+    margin-right: 70px;
+    margin-left: 90px;
+    flex: 1;
+    padding: 20px;
+    }
+
+    .texto{
+        margin-left: 70px;
+    }
+
+    .titulo{
+        display: flex;
+        align-items: center;
+    }
+    .bg-black {
+        background-color: #000000; /* Define o preto como cor de fundo */
+        color: #FFFFFF; /* Define o branco como a cor do texto para melhor legibilidade */
+    }
+    
+    .fa-facebook{
+        background-color: #345c94; /* Cor de fundo dos ícones (pode ser personalizada) */
+    }
+
+    .fa-twitter{
+    background-color: #44acec;
+    }
+    .fa-instagram{
+        background-color: #ca3d82;
+    }
+
+    .social-icons i {
+        font-size: 30px; /* Tamanho dos ícones */
+        border-radius: 50%; /* Deixa os ícones redondos */
+        padding: 10px; /* Espaçamento interno dos ícones */
+        color: white; /* Cor do ícone */
+        margin: 5px; /* Espaçamento entre os ícones */
+    }
+
+    </style>
+ 
+    <!-- Inclua a biblioteca Bootstrap JS e o jQuery para funcionalidades adicionais -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+ 
+</html>

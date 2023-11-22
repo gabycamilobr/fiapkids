@@ -16,7 +16,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/fiapkids',
 const UsuarioSchema = new mongoose.Schema({
     nome : { type : String},
     email : {type : String, required : true},
-    senha : { type : Number}
+    senha : { type : String}
 });
 
 const Usuario = mongoose.model("Usuário", UsuarioSchema);
@@ -76,7 +76,7 @@ app.post("/cadastroproduto", async(req, res)=>{
     const codigoExiste = await Produto.findOne({codigo : codigo});
  
     if(codigoExiste){
-        return res.status(400).json({error : "Esse id já está registrado no sistema"});
+        return res.status(400).json({error : "Esse código já está registrado no sistema"});
     }
 
     const produto = new Produto({
@@ -89,7 +89,7 @@ app.post("/cadastroproduto", async(req, res)=>{
 
     try{
         const newProduto = await produto.save();
-        res.json({error : null, msg : "Cadastro ok", usuarioId : newProduto._id});
+        res.json({error : null, msg : "Cadastro ok", usuarioCodigo : newProduto.codigo});
     } catch(error){
         res.status(400).json({error});
     }
@@ -97,12 +97,12 @@ app.post("/cadastroproduto", async(req, res)=>{
 });
 
 
-app.get("/", async(req, res)=> {
-    res.sendFile(__dirname+"/.html");
+app.get("/cadastrousuario", async(req, res)=> {
+    res.sendFile(__dirname+"/cadastrousuario.html");
 });
 
-app.get("/", async(req, res)=> {
-    res.sendFile(__dirname+"/.html");
+app.get("/cadastroproduto", async(req, res)=> {
+    res.sendFile(__dirname+"/cadastroproduto.html");
 });
 
 app.get("/index", async(req, res)=>{
